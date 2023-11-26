@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Api", "ARO.Risk.Rma.Fopi.Api\ARO.Risk.Rma.Fopi.Api.csproj", "{6AA356D5-8471-4857-94C7-BB12ADE25334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Application", "ARO.Risk.Rma.Fopi.Application\ARO.Risk.Rma.Fopi.Application.csproj", "{EE6BE9FB-F7F4-4261-80A7-4C35EDEE0493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Infra.Database.Fake", "ARO.Risk.Rma.Fopi.Infra.Database.Fake\ARO.Risk.Rma.Fopi.Infra.Database.Fake.csproj", "{91F7718A-1D80-4960-A73D-B7BD92E03FAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Domain", "ARO.Risk.Rma.Fopi.Domain\ARO.Risk.Rma.Fopi.Domain.csproj", "{A000CC37-9204-4B4F-8662-2EDD50EE1DEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Api.Tests", "ARO.Risk.Rma.Fopi.Api.Tests\ARO.Risk.Rma.Fopi.Api.Tests.csproj", "{DF781549-9ACD-4704-B082-34F7297B7319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARO.Risk.Rma.Fopi.Domain.Tests", "ARO.Risk.Rma.Fopi.Domain.Tests\ARO.Risk.Rma.Fopi.Domain.Tests.csproj", "{3A5E57A0-6938-4DA6-A9C3-9F7FD49BA732}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AA356D5-8471-4857-94C7-BB12ADE25334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA356D5-8471-4857-94C7-BB12ADE25334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA356D5-8471-4857-94C7-BB12ADE25334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA356D5-8471-4857-94C7-BB12ADE25334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6BE9FB-F7F4-4261-80A7-4C35EDEE0493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6BE9FB-F7F4-4261-80A7-4C35EDEE0493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6BE9FB-F7F4-4261-80A7-4C35EDEE0493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6BE9FB-F7F4-4261-80A7-4C35EDEE0493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F7718A-1D80-4960-A73D-B7BD92E03FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F7718A-1D80-4960-A73D-B7BD92E03FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F7718A-1D80-4960-A73D-B7BD92E03FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F7718A-1D80-4960-A73D-B7BD92E03FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A000CC37-9204-4B4F-8662-2EDD50EE1DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A000CC37-9204-4B4F-8662-2EDD50EE1DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A000CC37-9204-4B4F-8662-2EDD50EE1DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A000CC37-9204-4B4F-8662-2EDD50EE1DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF781549-9ACD-4704-B082-34F7297B7319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF781549-9ACD-4704-B082-34F7297B7319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF781549-9ACD-4704-B082-34F7297B7319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF781549-9ACD-4704-B082-34F7297B7319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5E57A0-6938-4DA6-A9C3-9F7FD49BA732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5E57A0-6938-4DA6-A9C3-9F7FD49BA732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5E57A0-6938-4DA6-A9C3-9F7FD49BA732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5E57A0-6938-4DA6-A9C3-9F7FD49BA732}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E20224CA-6FF5-47D8-9D5D-2971BECA1CE3}
+	EndGlobalSection
+EndGlobal

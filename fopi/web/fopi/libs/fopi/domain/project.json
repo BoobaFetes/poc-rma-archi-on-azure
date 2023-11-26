@@ -1,0 +1,40 @@
+{
+  "name": "domain",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/fopi/domain/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/fopi/domain",
+        "main": "libs/fopi/domain/src/index.ts",
+        "tsConfig": "libs/fopi/domain/tsconfig.lib.json",
+        "assets": ["libs/fopi/domain/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs domain {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/fopi/domain/**/*.ts",
+          "libs/fopi/domain/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/fopi/domain/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:domain"]
+}

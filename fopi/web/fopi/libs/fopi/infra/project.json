@@ -1,0 +1,40 @@
+{
+  "name": "infra",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/fopi/infra/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/fopi/infra",
+        "main": "libs/fopi/infra/src/index.ts",
+        "tsConfig": "libs/fopi/infra/tsconfig.lib.json",
+        "assets": ["libs/fopi/infra/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs infra {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/fopi/infra/**/*.ts",
+          "libs/fopi/infra/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/fopi/infra/jest.config.ts"
+      }
+    }
+  },
+  "tags": ["type:infra"]
+}
