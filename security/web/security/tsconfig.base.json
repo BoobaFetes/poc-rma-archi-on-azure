@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@BoobaFetes/security-application": [
+        "libs/security/application/src/index.ts"
+      ],
+      "@BoobaFetes/security-domain": ["libs/security/domain/src/index.ts"],
+      "@BoobaFetes/security-infra": ["libs/security/infra/src/index.ts"],
+      "@BoobaFetes/security-react-infra": [
+        "libs/security/react-infra/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

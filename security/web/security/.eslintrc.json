@@ -1,0 +1,63 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:application",
+                "onlyDependOnLibsWithTags": [
+                  "scope:application",
+                  "scope:react-infra",
+                  "scope:infra",
+                  "scope:domain"
+                ]
+              },
+              {
+                "sourceTag": "scope:react-infra",
+                "onlyDependOnLibsWithTags": [
+                  "scope:react-infra",
+                  "scope:infra",
+                  "scope:domain"
+                ]
+              },
+              {
+                "sourceTag": "scope:infra",
+                "onlyDependOnLibsWithTags": ["scope:infra", "scope:domain"]
+              },
+              {
+                "sourceTag": "scope:domain",
+                "onlyDependOnLibsWithTags": ["scope:domain"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}
