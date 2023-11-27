@@ -30,7 +30,7 @@ try {
     
     Write-Host "create api directory"
     [void](mkdir api)
-    Write-Output '' > ./api/.gitkip 
+    Write-Output '' > ./api/.gitkeep 
     Write-Host "    > you will have to create the back end by your own with VisualStudio scaffolders"
     Read-Host "(press enter to continue)"
     
@@ -39,7 +39,7 @@ try {
     set-location ./web
 
     Write-Host "generate workspace with NX"
-    npx create-nx-workspace@latest $name --preset=react-monorepo --appName=client --bundler=webpack --style=scss --pm=yarn --e2eTestRunner=none --no-nxCloud 
+    npx create-nx-workspace@17.1.3 $name --preset=react-monorepo --appName=client --bundler=webpack --style=scss --pm=yarn --e2eTestRunner=none --no-nxCloud 
     #nx@17.1.3 all required options are set, we don't need the '--no-interactive' option
 
     [System.IO.DirectoryInfo] $workspaceLocation = "$((Get-location).Path)/$name"
